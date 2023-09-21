@@ -1,6 +1,6 @@
 const basketball = document.querySelector('.basketball');
 const hoop = document.querySelector('.hoop');
-
+const line = document.getElementsByClassName('line');
 let isShooting = false;
 
 basketball.addEventListener('click', () => {
@@ -9,9 +9,12 @@ basketball.addEventListener('click', () => {
 
         // Move the basketball towards the hoop
         basketball.style.transition = 'transform 0.5s ease-in-out';
+        basketball.style.zIndex = '-1';
                     //   bounceBasketball(3); // Start bouncing 5 times
 
         basketball.style.transform = 'translateY(-600px) scale(0.5)';
+        // line.style.zIndex = '5';
+
 
         // When the basketball reaches the hoop
         setTimeout(() => {
@@ -34,6 +37,8 @@ basketball.addEventListener('click', () => {
             setTimeout(() => {
                 basketball.style.transition = 'none';
                 isShooting = false;
+                basketball.style.zIndex = '5';
+
             }, 2000); 
         }, 500);
     }

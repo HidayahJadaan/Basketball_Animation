@@ -27,6 +27,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s;
+  z-index: 5;
 }
 
 
@@ -37,6 +38,7 @@ body {
   position: absolute;
   top: 146px;
   left: 188px;
+  z-index: -1;
 }
 
 
